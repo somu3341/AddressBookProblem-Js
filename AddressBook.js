@@ -112,6 +112,12 @@ try{
           }, {});
           console.log(getContact);
     }
+    function IsCheckDuplicate(name)
+    {
+        let flag = contactArray.some(x=>x._firstname == name);
+        return flag;
+        console.log(flag);
+    }
 }
 catch(e)
 {
