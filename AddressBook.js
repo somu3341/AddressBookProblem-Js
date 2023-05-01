@@ -73,9 +73,14 @@ class Contact
     return "Firstname = "+this.firstname +"\n"+"Lasttname = "+this.lastname +"\n"+"Address = "+this.address +"\n"+"City = "+this.city +"\n"+"State = "+this.state +"\n"+"ZipCode = "+this.zip +"\n"+"Phone Number = "+this.phone + "\n"+"Email = "+this.email;
   }
 }
+let contactArray = new Array();
 try{
     contact = new Contact("Soma","Shekar","KGFS","RCBFan","RCBFan","343012","8987545565","somu@gmail.com");
-    console.log(contact.tostring());
+    //console.log(contact.tostring());
+    contactArray.push(contact);
+    contact = new Contact("Anil","Kumar","KOLar","RCBFan","RCBFan","343012","9887545565","anil@gmail.com");
+    contactArray.push(contact);
+    console.log(contactArray);
 }
 catch(ex)
 {
