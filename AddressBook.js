@@ -102,6 +102,16 @@ try{
         console.log("After Deleting Contact----->");
         console.log(contactArray);
     }
+    function GetCount()
+    {
+        const getContact = contactArray.reduce((total, next) => {
+
+            total[next] = (total[next] || 0) + 1 ;
+          
+            return +total;
+          }, {});
+          console.log(getContact);
+    }
 }
 catch(e)
 {
