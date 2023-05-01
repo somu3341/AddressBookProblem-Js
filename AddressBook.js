@@ -81,17 +81,29 @@ try{
     contact = new Contact("Anil","Kumar","KOLar","RCBFan","RCBFan","343012","9887545565","anil@gmail.com");
     contactArray.push(contact);
     console.log(contactArray);
-    let EditingName = "Soma";
-    for(let item of contactArray)
-    {
-        if(item._firstname==EditingName)
-        {
-            item._firstname="Raju";
+    Delete();
+    function Edit() {
+        let EditingName = "Soma";
+        for (let item of contactArray) {
+            if (item._firstname == EditingName) {
+                item._firstname = "Raju";
+            }
         }
+        console.log("After Editing Contact----->");
+        console.log(contactArray);
     }
-    console.log(contactArray);
+    function Delete() {
+        let DeleteName = "Soma";
+        for (let item of contactArray) {
+            if (item._firstname == DeleteName) {
+                contactArray.splice(contactArray.indexOf(item), 1);
+            }
+        }
+        console.log("After Deleting Contact----->");
+        console.log(contactArray);
+    }
 }
-catch(ex)
+catch(e)
 {
-    console.error(ex);
+    console.error(e);
 }
